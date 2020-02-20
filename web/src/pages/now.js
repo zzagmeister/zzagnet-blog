@@ -34,7 +34,7 @@ export const query = graphql`
     }
   }
 
-  query IndexPageQuery {
+  query nowQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
@@ -64,7 +64,7 @@ export const query = graphql`
   }
 `
 
-const IndexPage = props => {
+const now = props => {
   const {data, errors} = props
 
   if (errors) {
@@ -96,17 +96,18 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Container>
-        <h3>{site.description}</h3>
-        {postNodes && (
+        <h3>What I'm Doing Now</h3>
+        <p>Building this blog up.</p>
+
+        
           <BlogPostPreviewList
-            title='The following are some ideas that survived..'
-            nodes={postNodes}
-            browseMoreHref='/archive/'
+          
+            browseMoreHref1='/archive/'
           />
-        )}
+        
       </Container>
     </Layout>
   )
 }
 
-export default IndexPage
+export default now
