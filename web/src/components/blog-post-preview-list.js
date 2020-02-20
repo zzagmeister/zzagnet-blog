@@ -21,6 +21,11 @@ function BlogPostPreviewGrid (props) {
           <Link to={props.browseMoreHref}>Browse more</Link>
         </div>
       )}
+            {props.browseMoreHref1 && (
+        <div className={styles.browseMoreNav}>
+          <Link to={props.browseMoreHref1}>Things I have been thinking about</Link>
+        </div>
+      )}
     </div>
   )
 }
