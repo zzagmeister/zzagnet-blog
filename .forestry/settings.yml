@@ -7,7 +7,6 @@ sections:
 - type: document
   path: zzagnet-blog/web/src/pages/now.js
   label: now
-  match: "**/*"
 - type: heading
   label: Pages
 - type: directory
@@ -15,9 +14,6 @@ sections:
   label: src
   create: all
   match: "**/*"
-- type: document
-  path: web/src/page/now.js
-  label: now
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
