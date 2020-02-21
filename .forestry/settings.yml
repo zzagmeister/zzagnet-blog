@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: zzagnet-blog/web/src/pages/now.js
+  label: now
+  match: "**/*"
 - type: heading
   label: Pages
 - type: directory
